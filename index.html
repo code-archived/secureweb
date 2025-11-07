@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protected Area</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="protect.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌗</button>
+    </header>
+
+    <div class="container">
+      <!-- Login Screen -->
+      <div id="login-box" class="card visible">
+        <h1>🔒 Secure Access</h1>
+        <p>Please enter your password to continue.</p>
+
+        <div class="password-wrapper">
+          <input type="password" id="password-input" placeholder="Enter password..." />
+          <button id="show-password" class="show-btn" aria-label="Show password">👁️</button>
+        </div>
+
+        <button id="login-btn">Unlock</button>
+        <div id="message" class="message"></div>
+
+        <!-- Spinner -->
+        <div id="spinner" class="spinner" hidden>
+          <div class="loader"></div>
+          <p>Verifying...</p>
+        </div>
+      </div>
+
+      <!-- Protected Section -->
+      <div id="protected-content" class="card hidden">
+        <h1>Welcome 👋</h1>
+        <p>This is the protected area of your GitHub Pages site.</p>
+        <button id="logout-btn">Log out</button>
+      </div>
+    </div>
+  </body>
+</html>
